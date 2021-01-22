@@ -1,0 +1,22 @@
+#!/bin/bash
+
+---
+### Pinpoint Bosh Deployment Name Setting ###
+deployment_name: paasta-pinpoint-service                        #PinPoint_Deployment name
+#
+#### Main Stemcells Setting ###
+stemcell_os: ubuntu-xenial                                      # Deployment Main Stemcell OS
+stemcell_version: latest                                        # Main Stemcell Version
+stemcell_alias: default                                         # Main Stemcell Alias
+#
+#### VM Type
+vm_type: large
+#
+#### Pinpoint Release Deployment Setting ### 
+releases_name :  paasta-pinpoint-release                        # Pinpoint Release Name
+internal_networks_name : (internal_network_name)                # Some Network From Your 'bosh cloud-config(cc)'
+external_networks_name : (external_networks_name)               # Some Network From Your 'bosh cloud-config(cc)'
+haproxy_public_ip : (haproxy_public_ip)
+mariadb_disk_type : 100GB                                       # MariaDB Disk Type 'bosh cloud-config(cc)'
+PemSSH : false
+#
